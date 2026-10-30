@@ -10,7 +10,7 @@ The recommended setup is to use a Docker for containerization and Foxglove for v
 
 You can also run it natively if you want, for that see the [original README](./original.README.md)
 
-## Usage
+## Usage;
 
 A github action automatically publishes a ready to use docker image. Here is the minimal docker-compose.yml file to use:
 ```
@@ -33,3 +33,7 @@ docker compose pull && docker compose up
 6. You should be able to teleoperate the robot using `i` (forward), `j` (left), `k` (backward), `l` (right) and see its map and laser scan
 
 ![Foxglove visualization](assets/foxglove.png)
+
+## TroubleShooting;
+
+If you get this message : permission denied while trying to connect to the docker API at unix:///var/run/docker.sock check with this command id -nG if docker is listed, if it's not restart your computer with sudo reboot. 
